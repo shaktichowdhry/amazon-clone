@@ -5,6 +5,7 @@ import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "../StateProvider";
 
 function Checkout() {
+  // eslint-disable-next-line
   const [{ basket, user }, dispatch] = useStateValue();
 
   return (

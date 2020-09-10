@@ -8,6 +8,7 @@ import { useStateValue } from "../StateProvider";
 import { auth } from "../firebase";
 
 function Header() {
+  // eslint-disable-next-line
   const [{ basket, user }, dispatch] = useStateValue();
 
   const handleAuthentication = () => {
@@ -36,7 +37,7 @@ function Header() {
         {/* If no user then only login redirect */}
         <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header__option">
-            <span className="header__optionLineOne">Hello Shakti</span>
+            <span className="header__optionLineOne">Hello {user?.email}</span>
             <span className="header__optionLineTwo">
               {user ? "Sign Out" : "Sign In"}
             </span>

@@ -3,6 +3,7 @@ import "../assets/css/Product.css";
 import { useStateValue } from "../StateProvider";
 
 function Product({ id, title, image, price, rating }) {
+  // eslint-disable-next-line
   const [{ basket }, dispatch] = useStateValue();
   // console.log("This is the basket >>>", basket);
 
@@ -24,7 +25,7 @@ function Product({ id, title, image, price, rating }) {
     <div className="product">
       <div className="product__info">
         <p>{title}</p>
-        <p className="product_price">
+        <p className="product__price">
           <small>$</small>
           <strong>{price}</strong>
         </p>
@@ -32,6 +33,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
+              // eslint-disable-next-line
               <p>⭐️</p>
             ))}
         </div>

@@ -5,6 +5,7 @@ import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "../reducer";
 
 function Subtotal() {
+  // eslint-disable-next-line
   const [{ basket }, dispatch] = useStateValue();
 
   // My logic
